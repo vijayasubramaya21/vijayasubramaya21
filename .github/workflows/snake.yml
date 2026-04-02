@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3   # ✅ ADD THIS LINE
+
       - name: Generate snake
         uses: Platane/snk@main
         with:
