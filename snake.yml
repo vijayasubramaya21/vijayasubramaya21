@@ -1,0 +1,21 @@
+name: Generate Snake
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate snake
+        uses: Platane/snk@main
+        with:
+          github_user_name: vijayasubramaya21
+          outputs: dist/github-contribution-grid-snake.svg
+
+      - name: Push snake
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "snake animation"
+          add: "dist"
